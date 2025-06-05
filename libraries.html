@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Libraries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-section">
+    <h1>
+      <img src="img/libraries-cashu.png" alt="Cashu Libraries Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;"> Cashu Libraries
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search by name, language..." onkeyup="filterTable('librariesTable')" />
+        <button class="download-btn" onclick="downloadCSV('librariesTable', 'cashu_libraries.csv')">📥 Download CSV</button>
+      </div>
+
+      <div id="count"></div>
+    </div>
+
+    <table id="librariesTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Name</th>
+          <th onclick="sortTable(1)">Language</th>
+          <th onclick="sortTable(2)">GitHub</th>
+          <th onclick="sortTable(3)">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DotNut</td>
+          <td>C#</td>
+          <td><a href="https://github.com/Kukks/DotNut" target="_blank">GitHub</a></td>
+          <td>C# library implementing the Cashu protocol.</td>
+        </tr>
+        <tr>
+          <td>cashu-dart</td>
+          <td>Dart</td>
+          <td><a href="https://github.com/0xchat-app/cashu-dart" target="_blank">GitHub</a></td>
+          <td>Library to integrate Cashu into Dart-based apps.</td>
+        </tr>
+        <tr>
+          <td>Nutshell</td>
+          <td>Python</td>
+          <td><a href="https://github.com/cashubtc/nutshell" target="_blank">GitHub</a></td>
+          <td>Python library for using Cashu wallets and mints inside other Python projects.</td>
+        </tr>
+        <tr>
+          <td>CDK</td>
+          <td>Rust</td>
+          <td><a href="https://github.com/cashubtc/cdk" target="_blank">GitHub</a></td>
+          <td>Rust wallet and mint library by @cashubtc.</td>
+        </tr>
+        <tr>
+          <td>CashuSwift</td>
+          <td>Swift</td>
+          <td><a href="https://github.com/zeugmaster/CashuSwift" target="_blank">GitHub</a></td>
+          <td>Swift library implementing the Cashu protocol.</td>
+        </tr>
+        <tr>
+          <td>cashu-ts</td>
+          <td>TypeScript</td>
+          <td><a href="https://github.com/cashubtc/cashu-ts" target="_blank">GitHub</a></td>
+          <td>TypeScript library for building Cashu wallets.</td>
+        </tr>
+        <tr>
+          <td>cashu-crypto-ts</td>
+          <td>TypeScript</td>
+          <td><a href="https://github.com/cashubtc/cashu-crypto-ts" target="_blank">GitHub</a></td>
+          <td>Implements Cashu cryptographic operations for wallets and mints.</td>
+        </tr>
+        <tr>
+          <td>cashu-tools</td>
+          <td>TypeScript</td>
+          <td><a href="https://github.com/gandlafbtc/cashu-tools" target="_blank">GitHub</a></td>
+          <td>Advanced Cashu wallet tools based on cashu-ts.</td>
+        </tr>
+        <tr>
+          <td>blind-sig-js</td>
+          <td>JavaScript</td>
+          <td><a href="https://github.com/supertestnet/blind-sig-js" target="_blank">GitHub</a></td>
+          <td>JavaScript library implementing Cashu's blind signature mechanism.</td>
+        </tr>
+        <tr>
+          <td>cashu-wallet</td>
+          <td>TypeScript</td>
+          <td><a href="https://github.com/ebrakke/cashu-wallet" target="_blank">GitHub</a></td>
+          <td>Framework-agnostic Cashu wallet written in TypeScript.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/scripts.js"></script>
+  <script>
+    lucide?.createIcons?.();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Projects - Various Nutcases</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <div class="header-section">
+
+    <h1>
+      <img src="img/nutcases-cashu.png" alt="Various Nutcases Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;">
+      Various Nutcases
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a> 
+    
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search tools..." onkeyup="filterTable('toolsTable')" />
+      <button class="download-btn" onclick="downloadCSV('toolsTable', 'cashu_tools.csv')">📥 Download CSV</button>
+    </div>
+
+    <div id="count"></div>
+  
+  
+  </div>
+  
+
+  <table id="nutcasesTable">
+    <thead>
+      <tr>
+
+        <th onclick="sortTable(0)">Project</th>
+        <th onclick="sortTable(1)">Description</th>
+        <th onclick="sortTable(2)">Links</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Cashu-brrr</td><td>Cashu ecash printer.</td><td><a href="https://brrr.gandlaf.com/" target="_blank">Site</a> | <a href="https://github.com/gandlafbtc/cashu-brrr/" target="_blank">GitHub</a></td></tr>
+      <tr><td>Athenut</td><td>Search smarter (Kagi-powered). Pay in sats.</td><td><a href="https://athenut.com/" target="_blank">Site</a> | <a href="https://github.com/thesimplekid/athenut-mint" target="_blank">Mint</a> | <a href="https://github.com/thesimplekid/athenut-frontend" target="_blank">Frontend</a></td></tr>
+      <tr><td>Almandine</td><td>Uses Athenut above, wrapper with built-in CDK wallet.</td><td>–</td></tr>
+      <tr><td>Nutband</td><td>Cashu over radio/mesh with Reticulum and LXMF.</td><td><a href="https://github.com/jooray/nutband" target="_blank">GitHub</a></td></tr>
+      <tr><td>Cashu Faucet</td><td>Deposit/withdraw Cashu tokens via web.</td><td><a href="https://github.com/gandlafbtc/cashu-faucet" target="_blank">GitHub</a></td></tr>
+      <tr><td>Spacenut</td><td>Cashu-enabled game.</td><td><a href="https://spacenut.nutstash.app/" target="_blank">Play</a> | <a href="https://github.com/gandlafbtc/spacenut" target="_blank">GitHub</a></td></tr>
+      <tr><td>CashuProjects</td><td>Collection of TypeScript projects.</td><td><a href="https://github.com/CashuProjects" target="_blank">GitHub</a></td></tr>
+      <tr><td>cashu-escrow-kit</td><td>Ecash escrow provider and client concept.</td><td><a href="https://github.com/f321x/cashu-escrow-kit" target="_blank">GitHub</a></td></tr>
+      <tr><td>CLN mint plugin</td><td>CLN plugin for running a mint on your node.</td><td><a href="https://github.com/gudnuf/cln_pyshu_mint" target="_blank">GitHub</a></td></tr>
+      <tr><td>Wrapnuts</td><td>CLI to embed Cashu into files via steganography.</td><td><a href="https://github.com/wrapnuts/wrapnuts/tree/main" target="_blank">GitHub</a></td></tr>
+      <tr><td>Paywally</td><td>Lightning paywall powered by Cashu.</td><td><a href="https://github.com/bordalix/paywally" target="_blank">GitHub</a></td></tr>
+      <tr><td>Hide a message in an emoji</td><td>Hide ecash in emojis.</td><td><a href="https://emoji.paulbutler.org/?mode=encode" target="_blank">Site</a> | <a href="https://github.com/paulgb/emoji-encoder" target="_blank">GitHub</a></td></tr>
+      <tr><td>Meme amigo</td><td>Hide ecash in memes.</td><td><a href="https://www.memeamigo.lol/" target="_blank">Site</a></td></tr>
+      <tr><td>Hashpool</td><td>Accountless mining pool using ecash shares.</td><td><a href="https://github.com/vnprc/hashpool" target="_blank">GitHub</a> | <a href="https://hashpool.dev/articles/what-is-hashpool/" target="_blank">Docs</a></td></tr>
+      <tr><td>Tollgate</td><td>WiFi router into decentralized ISP using ecash.</td><td><a href="https://github.com/OpenTollGate/tollgate-app" target="_blank">GitHub</a></td></tr>
+      <tr><td>Cashucards</td><td>Greeting cards that gift Bitcoin via Cashu.</td><td><a href="https://github.com/Marc26z/CashuCards" target="_blank">GitHub</a></td></tr>
+      <tr><td>ecash OpenAI API client</td><td>Pay for OpenAI API with anonymous ecash.</td><td><a href="https://github.com/9qeklajc/ecash-402-client" target="_blank">GitHub</a></td></tr>
+      <tr><td>Receipt.cash</td><td>Bill splitter with BTC conversion and Cashu pay.</td><td><a href="https://github.com/Origami74/receipt-cash" target="_blank">GitHub</a></td></tr>
+      <tr><td>routstr</td><td>Marketplace for LLM APIs using Cashu.</td><td><a href="https://github.com/routstr" target="_blank">GitHub</a></td></tr>
+      <tr><td>Cashu Bonds</td><td>Proof-of-concept of identity bonds with Cashu.</td><td><a href="https://github.com/lescuer97/nut-bond" target="_blank">GitHub</a></td></tr>
+      <tr><td>Openpleb</td><td>Match fiat QR payers with BTC payers using Cashu.</td><td><a href="https://github.com/gandlafbtc/open-pleb" target="_blank">GitHub</a></td></tr>
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

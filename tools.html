@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    td i[data-lucide] {
+      vertical-align: middle;
+      margin-right: 6px;
+      stroke-width: 1.8;
+      color: #4E9F3D;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-section">
+    <h1>
+      <img src="img/tools-cashu.png" alt="Cashu Tools Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;">
+      Cashu Tools
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search tools..." onkeyup="filterTable('toolsTable')" />
+      <button class="download-btn" onclick="downloadCSV('toolsTable', 'cashu_tools.csv')">📥 Download CSV</button>
+    </div>
+
+    <div id="count"></div>
+  </div>
+
+  <table id="toolsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Tool</th>
+        <th onclick="sortTable(1)">Category</th>
+        <th onclick="sortTable(2)">Description</th>
+        <th onclick="sortTable(3)">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Testnut Mint</td>
+        <td>Testnet Mint</td>
+        <td>Mint with fake ecash and fees for testing.</td>
+        <td><a href="https://testnut.cashu.space" target="_blank">testnut.cashu.space</a></td>
+      </tr>
+      <tr>
+        <td>No-fees Testnut Mint</td>
+        <td>Testnet Mint</td>
+        <td>Mint with fake ecash and no fees for testing.</td>
+        <td><a href="https://nofees.testnut.cashu.space" target="_blank">nofees.testnut.cashu.space</a></td>
+      </tr>
+      <tr>
+        <td>Bitcoinmints</td>
+        <td>Mint Discovery</td>
+        <td>List of ecash mints, supported NUTs, and reviews.</td>
+        <td><a href="https://bitcoinmints.com" target="_blank">bitcoinmints.com</a></td>
+      </tr>
+      <tr>
+        <td>Cashumints.space</td>
+        <td>Mint Discovery</td>
+        <td>Index of Cashu mints with reviews and full pages.</td>
+        <td><a href="https://cashumints.space" target="_blank">cashumints.space</a></td>
+      </tr>
+      <tr>
+        <td>Mint Audit</td>
+        <td>Audit</td>
+        <td>Mint auditing tool to verify mint status.</td>
+        <td><a href="https://github.com/cashubtc/audit" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>Mint Watch Bot</td>
+        <td>Audit</td>
+        <td>Bot that watches the online status of mints.</td>
+        <td><a href="https://github.com/cashubtc/audit" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>Restore Tool-from seed</td>
+        <td>Restore</td>
+        <td>Restore your wallet from a seed phrase.</td>
+        <td><a href="https://restore.cashu.space" target="_blank">restore.cashu.space</a></td>
+      </tr>
+      <tr>
+        <td>Cashu Decode v4</td>
+        <td>Token Decoder</td>
+        <td>Decode, view and edit v4 tokens in real time.</td>
+        <td><a href="https://decode.cashu.space" target="_blank">decode.cashu.space</a></td>
+      </tr>
+      <tr>
+        <td>Cashu Decoder (v3)</td>
+        <td>Token Decoder</td>
+        <td>Decoder for Cashu v3 tokens.</td>
+        <td><a href="https://v3.decode.cashu.space" target="_blank">v3.decode.cashu.space</a></td>
+      </tr>
+      <tr>
+        <td>Cashu Decoder (v3 & v4)</td>
+        <td>Token Decoder</td>
+        <td>Decoder supporting both v3 and v4 Cashu tokens.</td>
+        <td><a href="https://decode.cashu.space" target="_blank">decode.cashu.space</a></td>
+      </tr>
+      <tr>
+        <td>Numbnoot</td>
+        <td>Misc</td>
+        <td>Simulator for the Blind Diffie-Hellman Key Exchange used in Cashu.</td>
+        <td><a href="https://github.com/fiatjaf/numbnoot" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>Nutshell Configurer</td>
+        <td>Misc</td>
+        <td>Tool to configure .env files for Nutshell mints.</td>
+        <td><a href="https://github.com/cashubtc/nutshell-configurer" target="_blank">GitHub</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+  <script>
+    lucide?.createIcons?.();
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Tutorials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="header-section">
+
+    <h1>
+      <img src="img/tutorials-cashu.png" alt="Cashu Tutorials Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;">
+      Cashu Tutorials
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by title, channel, language..." onkeyup="filterTable()" />
+      <button class="download-btn" onclick="downloadCSV()">📥 Download CSV</button>
+    </div>
+    
+    <div id="count"></div>
+  </div>
+
+  
+
+  <table id="tutorialsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Channel</th>
+        <th onclick="sortTable(1)">Video</th>
+        <th onclick="sortTable(2)">Language</th>
+        <th onclick="sortTable(3, true)">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.youtube.com/@BTCSessions" target="_blank">BTC Sessions</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/riTRD0BdMDI/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=riTRD0BdMDI" target="_blank">Cashu Tutorial - Chaumian Ecash On Bitcoin</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-02-27</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@BTCSessions" target="_blank">BTC Sessions</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/LIPw1c74LBU/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=LIPw1c74LBU" target="_blank">CASHU - Bitcoin Wallet For Privacy + Low Fees</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2024-06-12</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@BTCSessions" target="_blank">BTC Sessions</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/xhDQT4TeNIU/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=xhDQT4TeNIU" target="_blank">Unlock Perfect Privacy with eNuts</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-10-03</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@einundzwanzigpodcast" target="_blank">Einundzwanzig</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/tV7YlnhRHWk/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=tV7YlnhRHWk" target="_blank">Bitcoin ANONYM verschicken CASHU erklärt</a>
+          </div>
+        </td>
+        <td>🇩🇪 German</td>
+        <td>2024-02-06</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@ianmajor" target="_blank">Ian Major | All Things Bitcoin</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/KiCGUWJ50Uo/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=KiCGUWJ50Uo" target="_blank">Is Cashu & Bitcoin eCash The Future?</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2024-05-25</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@HalloBitcoin" target="_blank">Privatsphäre auf Bitcoin: Cashu!</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/Mch5uWahQj4/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=Mch5uWahQj4" target="_blank">Privatsphäre auf Bitcoin: Cashu!</a>
+          </div>
+        </td>
+        <td>🇩🇪 German</td>
+        <td>2024-03-04</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://www.youtube.com/@coincharge" target="_blank">Coincharge + Coinpages/a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/n7jv3EkA934/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=n7jv3EkA934" target="_blank">Cashu - eCash Wallet und Mint System für Bitcoin Lightning auf dem LNbits Server</a>
+          </div>
+        </td>
+        <td>🇩🇪 German</td>
+        <td>2023-01-12</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>

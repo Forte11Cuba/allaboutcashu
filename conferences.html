@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Tutorials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+   <div class="header-section">
+    <h1>
+      <img src="img/conferences-cashu.png" alt="Cashu Conferences Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;">
+      Cashu Conferences
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by title..." onkeyup="filterTable()" />
+      <button class="download-btn" onclick="downloadCSV()">📥 Download CSV</button>
+    </div>
+
+    <div id="count"></div>
+  </div>
+
+  <table id="tutorialsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Channel</th>
+        <th onclick="sortTable(1)">Video</th>
+        <th onclick="sortTable(2)">Language</th>
+        <th onclick="sortTable(3, true)">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.youtube.com/@adoptingbitcoin" target="_blank">Adopting Bitcoin</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/UNjVc-WYdgE/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=UNjVc-WYdgE" target="_blank">Blinding custodians with Cashu - Calle - Adopting Bitcoin Day 1 - Galoy Stage</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2022-11-18</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@Bitcoinology" target="_blank">Bitcoinology</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/VwMzNE1D3so/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=VwMzNE1D3so" target="_blank">Chaumian eCash in Bitcoin - Cashu & Fedimint - Adam Gibson aka waxwing</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2022-10-18</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@highlevelbitcoin" target="_blank">High Level Bitcoin</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/xfYmwc-gnK8/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=xfYmwc-gnK8" target="_blank">Cashu workshop</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2024-02-08</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@HodlHodl" target="_blank">Hodl Hodl</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/V6HBM7jL0cw/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=V6HBM7jL0cw" target="_blank">Cashu: Chaumian E-Cash protocol for Bitcoin</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-11-17</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@crodas" target="_blank">César Rodas</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/lp5K28W5VaY/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=lp5K28W5VaY" target="_blank">Cashu web wallet experiment embedded wallet</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2025-01-06</td>
+      </tr>
+
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/lovyq77OeVM/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/watch?v=lovyq77OeVM" target="_blank">The Second Renaissance of ecash | Calle</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/5NFosPKVVM8/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/5NFosPKVVM8?t=155s" target="_blank">Ecash in Non-permissive Environments: How would it work when SHTF | leito</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/yqmdnVIxH90/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/yqmdnVIxH90?t=2397s" target="_blank">Building Ecash Support into Web Apps | IroncladDev</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/uT_VtKnnAZA/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/uT_VtKnnAZA?t=134s" target="_blank">Cashu on Shopstr, NIP-60 Cashu Wallet | calvadev</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/uT_VtKnnAZA/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/uT_VtKnnAZA?t=9561s" target="_blank">Blind Signatures & Anonymous Credentials | nothingmuch</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/uCyRffPdsaU/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/uCyRffPdsaU?t=2872s" target="_blank">eCash is Obsolete: ZK is the Future | Orkun Mahir Kilic</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/uCyRffPdsaU/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/uCyRffPdsaU?t=5512s" target="_blank">Ecash: New Frontiers in Privacy | Panel</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/7j1cH25CYKY/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/7j1cH25CYKY?t=7496s" target="_blank">How to Build a Fedimint Wallet in 20 Minutes (without Rust) | Alex Lewin</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/7j1cH25CYKY/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/7j1cH25CYKY?t=11151s" target="_blank">Cashu Dev Kit (CDK) Deep Dive | thesimplekid</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/PZNKV4zSlqk/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/PZNKV4zSlqk?t=268s" target="_blank">Basics of Cashu Wallet development with cashu-ts | Egge</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com/@btcplusplus" target="_blank">bitcoin++</a></td>
+      <td>
+        <div class="video-cell">
+          <img src="https://img.youtube.com/vi/PZNKV4zSlqk/hqdefault.jpg" alt="Thumbnail">
+          <a href="https://www.youtube.com/live/PZNKV4zSlqk?t=3972s" target="_blank">Building a Custodial Lightning Wallet the Right Way | gudnuf</a>
+        </div>
+      </td>
+      <td>🇬🇧 English</td>
+      <td>2024-10-11</td>
+    </tr>
+
+
+
+      
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Podcasts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="header-section">
+    <h1>
+      <img src="img/podcast-cashu.png" alt="Cashu Podcasts Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;">
+      Cashu Podcasts
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by title..." onkeyup="filterTable()" />
+      <button class="download-btn" onclick="downloadCSV()">📥 Download CSV</button>
+    </div>
+
+    <div id="count"></div>
+  </div>
+
+  <table id="tutorialsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Channel</th>
+        <th onclick="sortTable(1)">Video</th>
+        <th onclick="sortTable(2)">Language</th>
+        <th onclick="sortTable(3, true)">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.youtube.com/@KevinRooke" target="_blank">Kevin Rooke</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/Ikhf5GwVD8Y/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=Ikhf5GwVD8Y" target="_blank">Calle on Open Source Software, Lightning Development, LNBits, Cashu, & More | E91</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-01-11</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@bitcoin.review" target="_blank">Bitcoin Review Podcast with NVK & Guests</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/-nzVYVcdk9M/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=-nzVYVcdk9M" target="_blank">BR031 Cashu & Fedimint: ecash, Bitcoin's layer 3 & scalability ft. Calle, E Sirion, Rijndael & Odell</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-04-12</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@PrestonPysh" target="_blank">Preston Pysh</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/Z55drsUfIos/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=Z55drsUfIos" target="_blank">eCash on Bitcoin & Nostr w/ Calle from Cashu (BTC201)</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2024-09-25</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@Lunaticoin" target="_blank">Lunaticoin</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/_XmQSpAhFN4/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=_XmQSpAhFN4" target="_blank">Creación y evolución del eCash: Chaumian Mints, Fedimint y Cashu</a>
+          </div>
+        </td>
+        <td>🇪🇸 Spanish</td>
+        <td>2022-09-27</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@Lunaticoin" target="_blank">Lunaticoin</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/zdtRT7phXBo/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=zdtRT7phXBo" target="_blank">EN | Cashu, an eCash wallet and Mint with callebtc</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2022-09-27</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@CitadelDispatch" target="_blank">Citadel Dispatch</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/37A4SNC_T8c/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=37A4SNC_T8c" target="_blank">CD144: CASHU WITH CALLE</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2024-11-18</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@SpaceDenver" target="_blank">The Space</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/EkrmdQ1jn50/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=EkrmdQ1jn50" target="_blank">Cashu - Chaumian Mints on Bitcoin /w @CalleBTC | Value Stack 31</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-02-22</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@AnitaPosch" target="_blank">Anita Posch - Bitcoin for Fairness</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/j4Fb-opygWo/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=j4Fb-opygWo" target="_blank">What Is eCash? Fedimints and Cashu</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2024-03-27</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.youtube.com/@PeterMcCormackShow" target="_blank">Peter McCormack</a></td>
+        <td>
+          <div class="video-cell">
+            <img src="https://img.youtube.com/vi/kUJmHo990Fk/hqdefault.jpg" alt="Thumbnail">
+            <a href="https://www.youtube.com/watch?v=kUJmHo990Fk" target="_blank">Scaling Bitcoin Privacy with Calle</a>
+          </div>
+        </td>
+        <td>🇬🇧 English</td>
+        <td>2023-04-19</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>

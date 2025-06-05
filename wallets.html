@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Wallets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="header-section">
+    <h1>
+      <img src="img/wallets-cashu.png" alt="Cashu Wallets Logo" style="height: 2em; vertical-align: middle; margin-right: 0.4em;">
+      Cashu Wallets
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by name, platform..." onkeyup="filterTable()" />
+      <button class="download-btn" onclick="downloadCSV()">📥 Download CSV</button>
+    </div>
+
+    <div id="count"></div>
+  </div>
+
+  <table id="walletsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Name</th>
+        <th onclick="sortTable(1)">GitHub</th>
+        <th onclick="sortTable(2)">Website</th>
+        <th onclick="sortTable(3)">Platforms</th>
+        <th onclick="sortTable(4)">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nutshell</td>
+        <td><a href="https://github.com/cashubtc/nutshell" target="_blank">GitHub</a></td>
+        <td>N/A</td>
+        <td class="platform-cell"><i data-lucide="terminal" class="platform-icon"></i><span>CLI</span></td>
+        <td>CLI wallet via PyPi. Built-in Tor, multi-mint, nostr support, P2SH tokens.</td>
+      </tr>
+      <tr>
+        <td>Nutstash</td>
+        <td><a href="https://github.com/gandlafbtc/nutstash-wallet" target="_blank">GitHub</a></td>
+        <td><a href="https://nutstash.app" target="_blank">nutstash.app</a></td>
+        <td class="platform-cell"><i data-lucide="globe" class="platform-icon"></i><span>Web (PWA)</span></td>
+        <td>Web wallet with multi-mint and nostr support. Built with cashu-ts.</td>
+      </tr>
+      <tr>
+        <td>Minibits</td>
+        <td><a href="https://github.com/minibits-cash/minibits_wallet" target="_blank">GitHub</a></td>
+        <td><a href="https://www.minibits.cash/" target="_blank">minibits.cash</a></td>
+        <td class="platform-cell"><i data-lucide="smartphone" class="platform-icon"></i><span>Android</span></td>
+        <td>Mobile wallet focused on performance and usability. Supports ecash and Lightning.</td>
+      </tr>
+      <tr>
+        <td>Cashu.me</td>
+        <td><a href="https://github.com/cashubtc/cashu.me" target="_blank">GitHub</a></td>
+        <td><a href="https://wallet.cashu.me/" target="_blank">wallet.cashu.me</a></td>
+        <td class="platform-cell"><i data-lucide="globe" class="platform-icon"></i><span>Web (PWA)</span></td>
+        <td>Web wallet built on Quasar and Vue.js. Written in JavaScript and TypeScript.</td>
+      </tr>
+      <tr>
+        <td>Macadamia</td>
+        <td><a href="https://github.com/zeugmaster/macadamia" target="_blank">GitHub</a></td>
+        <td><a href="https://macadamia.cash/" target="_blank">macadamia.cash</a></td>
+        <td class="platform-cell"><i data-lucide="apple" class="platform-icon"></i><span>iOS</span></td>
+        <td>Native iOS wallet written in Swift. Supports standard Cashu operations.</td>
+      </tr>
+      <tr>
+        <td>BoardwalkCash</td>
+        <td><a href="https://github.com/MakePrisms/boardwalkcash" target="_blank">GitHub</a></td>
+        <td><a href="https://boardwalkcash.com/" target="_blank">boardwalkcash.com</a></td>
+        <td class="platform-cell"><i data-lucide="globe" class="platform-icon"></i><span>Web</span></td>
+        <td>Dollar-based CashuBTC wallet built on Bitcoin and connected to Nostr.</td>
+      </tr>
+      <tr>
+        <td>Safebox</td>
+        <td><a href="https://github.com/trbouma/safebox" target="_blank">GitHub</a></td>
+        <td>N/A</td>
+        <td class="platform-cell"><i data-lucide="server" class="platform-icon"></i><span>Python (Backend)</span></td>
+        <td>Python implementation of a Cashu wallet component for custodial Lightning payments. Experimental.</td>
+      </tr>
+      <tr>
+        <td>bullishNuts</td>
+        <td><a href="https://github.com/thebullishbitcoiner/bullishnuts" target="_blank">GitHub</a></td>
+        <td><a href="https://bullishnuts.vercel.app/" target="_blank">bullishnuts.vercel.app</a></td>
+        <td class="platform-cell"><i data-lucide="globe" class="platform-icon"></i><span>Web (PWA)</span></td>
+        <td>Ecash wallet in early beta phase. Simple and sleek design.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

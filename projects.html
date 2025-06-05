@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cashu Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="header-section">
+
+    <h1>
+      <img src="img/projects-cashu.png" alt="Cashu Projects Logo" style="height: 2.5em; vertical-align: middle; margin-right: 0.4em;">
+      Cashu Projects
+    </h1>
+    <a class="back-link" href="index.html">← Back to Directory</a>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search projects..." onkeyup="filterTable('projectsTable')" />
+      <button class="download-btn" onclick="downloadCSV('projectsTable', 'cashu_projects.csv')">📥 Download CSV</button>
+    </div>
+
+    <div id="count"></div>
+  </div>
+
+  <table id="projectsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable( 0)">Project</th>
+        <th onclick="sortTable(1)">Type</th>
+        <th onclick="sortTable(2)">Category</th>
+        <th onclick="sortTable(3)">Description</th>
+        <th onclick="sortTable(4)">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cashu NutLock</td>
+        <td>P2PK Locked and Multi-Sig Tokens</td>
+        <td>Locked Tokens</td>
+        <td>Lets you lock a Cashu token to one or more public keys (Nostr NPUB or P2PK) with time-based and multi-sig support.</td>
+        <td><a href="https://www.nostrly.com/cashu-nutlock/" target="_blank">Page</a></td>
+      </tr>
+      <tr>
+        <td>Cashu Witness</td>
+        <td>P2PK Locked and Multi-Sig Tokens</td>
+        <td>Locked Tokens</td>
+        <td>Unlock locked Cashu tokens using private key (Nostr NSEC or P2PK) with multi-sig validation.</td>
+        <td><a href="https://www.nostrly.com/cashu-witness/" target="_blank">Page</a></td>
+      </tr>
+      <tr>
+        <td>0xChat</td>
+        <td>Messengers</td>
+        <td>Chat App</td>
+        <td>Secure Nostr-based chat app with integrated Cashu payments.</td>
+        <td><a href="https://github.com/0xchat-app" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>KeyChat</td>
+        <td>Messengers</td>
+        <td>Chat App</td>
+        <td>Chat app built on Cashu, Nostr, and Signal Protocol.</td>
+        <td><a href="https://github.com/keychat-io/keychat-app" target="_blank">GitHub</a>, <a href="https://www.keychat.io/" target="_blank">Website</a></td>
+      </tr>
+      <tr>
+        <td>Proxnut</td>
+        <td>X-Cashu</td>
+        <td>HTTP Gateway</td>
+        <td>Forwards requests only if valid Cashu token is in X-Cashu header.</td>
+        <td><a href="https://github.com/gandlafbtc/proxnut" target="_blank">GitHub</a>, <a href="https://proxnut.com/" target="_blank">Website</a></td>
+      </tr>
+      <tr>
+        <td>ChatNut</td>
+        <td>X-Cashu</td>
+        <td>LLM Chat</td>
+        <td>Chat app for LLMs using pay-per-request via Cashu without accounts.</td>
+        <td><a href="https://chatnut.sparkpay.pt/" target="_blank">Website</a></td>
+      </tr>
+      <tr>
+        <td>X-Cashu</td>
+        <td>X-Cashu</td>
+        <td>REST Monetization</td>
+        <td>Project to monetize REST APIs using ecash in HTTP headers (402 Payment Required).</td>
+        <td><a href="https://github.com/cashubtc/xcashu" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>npubcash-server</td>
+        <td>LN Address Support</td>
+        <td>LN Address</td>
+        <td>Lightning address provider for nostr pubkeys using Cashu-Address.</td>
+        <td><a href="https://github.com/cashubtc/npubcash-server" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>SatsContact</td>
+        <td>LN Address Support</td>
+        <td>LN Address</td>
+        <td>Generates LN addresses and converts received sats to Cashu tokens via Telegram.</td>
+        <td><a href="https://github.com/massmux/SatsContact" target="_blank">GitHub</a></td>
+      </tr>
+      <tr>
+        <td>Nostrly Cashu Redeem</td>
+        <td>Redeem Tools</td>
+        <td>Token Redemption</td>
+        <td>Modern redeem tool supporting v4 tokens, emojis, and making change.</td>
+        <td><a href="https://www.nostrly.com/cashu-redeem/" target="_blank">Website</a></td>
+      </tr>
+      <tr>
+        <td>Cashu-redeem webtool</td>
+        <td>Redeem Tools</td>
+        <td>Token Redemption</td>
+        <td>Redeem Cashu tokens directly into your Lightning wallet.</td>
+        <td><a href="https://cashu-redeem.vercel.app/" target="_blank">Website</a></td>
+      </tr>
+      <tr>
+        <td>Cashu-redeem (newer)</td>
+        <td>Redeem Tools</td>
+        <td>Token Redemption</td>
+        <td>Redeem v4 tokens, decode emojis, supports NWC and stores change locally.</td>
+        <td><a href="https://redeem.cashu.me/" target="_blank">Website</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="js/scripts.js"></script>
+  <script>
+    lucide?.createIcons?.();
+  </script>
+</body>
+</html>
